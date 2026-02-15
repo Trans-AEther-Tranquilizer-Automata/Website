@@ -8,7 +8,7 @@ const environment: Environment = {
 		process.env.NODE_ENV === "development" || process.argv.includes("--dev"),
 	botInvite: process.env.BOT_INVITE || "#",
 	discordInvite: process.env.DISCORD_INVITE || "#",
-	sourceUrl: process.env.SOURCE_URL || "#",
+	sourceUrl: process.env.SOURCE_URL || "https://github.com/Trans-AEther-Tranquilizer-Automata/Website",
 };
 
 function verifyRequiredVariables(): void {

@@ -12,6 +12,19 @@ bun install
 bun run dev
 ```
 
+## Docker
+
+```sh
+docker pull ghcr.io/trans-aether-tranquilizer-automata/website:latest
+```
+
+Or use the compose file:
+
+```sh
+cp .env.example .env
+docker compose up -d
+```
+
 ## Environment Variables
 
 | Variable | Description |
@@ -20,6 +33,7 @@ bun run dev
 | `PORT` | Server port |
 | `BOT_INVITE` | Discord bot invite URL |
 | `DISCORD_INVITE` | Discord server invite URL |
+| `SOURCE_URL` | Source code repository URL |
 
 ## Data
 
