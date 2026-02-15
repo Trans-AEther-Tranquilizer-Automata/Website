@@ -13,6 +13,7 @@ COPY public public
 COPY data data
 COPY types types
 COPY tsconfig.json package.json ./
+RUN mkdir -p logs && chown bun:bun logs
 
 USER bun
 ENV NODE_ENV=production
