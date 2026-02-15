@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>404 — Tata Bot</title>
+		<meta name="description" content="Page not found." />
+		<meta name="theme-color" content="#d4a843" />
+
+		<link rel="icon" href="/public/assets/bot/avatar-circle.png" />
+		<link rel="stylesheet" href="/public/css/base.css" />
+		<link rel="stylesheet" href="/public/css/nav.css" />
+		<link rel="stylesheet" href="/public/css/responsive.css" />
+		<style>
+			.not-found {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 120px 24px 80px;
+			}
+
+			.not-found-code {
+				font-family: var(--font-mono);
+				font-size: 5rem;
+				font-weight: 800;
+				color: var(--accent-dim);
+				line-height: 1;
+				margin-bottom: 12px;
+			}
+
+			.not-found-title {
+				font-size: 1.5rem;
+				font-weight: 700;
+				margin-bottom: 8px;
+			}
+
+			.not-found-desc {
+				color: var(--text-muted);
+				font-size: 0.95rem;
+				margin-bottom: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="nav scrolled" id="nav">
+			<div class="nav-inner container">
+				<a href="/" class="nav-brand">
+					<img src="/public/assets/bot/avatar.png" alt="Tata" class="nav-avatar" />
+					<span class="nav-name">Tata</span>
+				</a>
+				<button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="nav-links" id="nav-links">
+					<a href="/" class="nav-link">Home</a>
+					<a href="/commands" class="nav-link">Commands</a>
+					<a href="/showcase" class="nav-link">Showcase</a>
+					<a href="{{BOT_INVITE}}" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Invite Bot</a>
+				</div>
+			</div>
+		</nav>
+
+		<main class="not-found">
+			<div>
+				<p class="not-found-code">404</p>
+				<h1 class="not-found-title">Lost on Talos-II</h1>
+				<p class="not-found-desc">This area hasn't been explored yet.</p>
+				<a href="/" class="btn btn-primary">Return to Base</a>
+			</div>
+		</main>
+
+		<script src="/public/js/app.js"></script>
+	</body>
+</html>

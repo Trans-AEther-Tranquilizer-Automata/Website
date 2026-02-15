@@ -1,0 +1,153 @@
+.cmd-page {
+	padding: 120px 0 80px;
+	min-height: 100vh;
+	background: var(--bg);
+}
+
+.cmd-header {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	margin-bottom: 28px;
+}
+
+.cmd-header-icon {
+	width: 56px;
+	height: 56px;
+	flex-shrink: 0;
+}
+
+.cmd-header-icon img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.cmd-header-title {
+	font-size: 1.5rem;
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+.cmd-header-sub {
+	color: var(--text-muted);
+	font-size: 0.85rem;
+}
+
+.cmd-search-wrap {
+	position: relative;
+	margin-bottom: 24px;
+}
+
+.cmd-search-icon {
+	position: absolute;
+	left: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--text-muted);
+	pointer-events: none;
+}
+
+.cmd-search {
+	width: 100%;
+	padding: 12px 14px 12px 42px;
+	background: var(--bg-card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--text);
+	font-size: 0.95rem;
+	font-family: inherit;
+	outline: none;
+	transition:
+		border-color 0.2s,
+		box-shadow 0.2s;
+}
+
+.cmd-search::placeholder {
+	color: var(--text-muted);
+}
+
+.cmd-search:focus {
+	border-color: var(--accent-dim);
+	box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.cmd-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.cmd-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 12px 16px;
+	border-radius: var(--radius);
+	transition: background 0.15s;
+}
+
+.cmd-item:hover {
+	background: var(--bg-card);
+}
+
+.cmd-info {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-width: 0;
+}
+
+.cmd-name {
+	font-family: var(--font-mono);
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--text);
+	white-space: nowrap;
+}
+
+.cmd-args {
+	display: flex;
+	gap: 6px;
+	flex-shrink: 0;
+}
+
+.cmd-arg {
+	font-size: 0.7rem;
+	font-family: var(--font-mono);
+	color: var(--text-muted);
+	background: var(--bg-deep);
+	border: 1px solid var(--border);
+	padding: 2px 7px;
+	border-radius: var(--radius);
+	white-space: nowrap;
+}
+
+.cmd-desc {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.cmd-bot {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.cmd-empty {
+	text-align: center;
+	color: var(--text-muted);
+	padding: 48px 0;
+	font-size: 0.95rem;
+}
+
+.commands-cta {
+	padding: 100px 0;
+	background: linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+	text-align: center;
+}
