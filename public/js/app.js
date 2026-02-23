@@ -19,11 +19,15 @@
 	const links = document.getElementById("nav-links");
 
 	const nav = document.getElementById("nav");
+	const alwaysScrolled = nav?.classList.contains("scrolled") ?? false;
 	let menuOpen = false;
 
 	const updateNav = () => {
 		if (nav) {
-			nav.classList.toggle("scrolled", menuOpen || window.scrollY > 40);
+			nav.classList.toggle(
+				"scrolled",
+				alwaysScrolled || menuOpen || window.scrollY > 40,
+			);
 		}
 	};
 
