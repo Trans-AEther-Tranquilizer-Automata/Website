@@ -37,7 +37,7 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 				: "";
 
 		items.push(
-			`<div class="cmd-item" data-cmd="/${name}"><div class="cmd-info"><span class="cmd-name">/${name}</span>${argsHtml}<span class="cmd-desc">${desc}</span></div><span class="cmd-bot">Tata</span></div>`,
+			`<div class="cmd-item" data-cmd="/${name}"><div class="cmd-info"><span class="cmd-name">/${name}</span>${argsHtml}<span class="cmd-desc">${desc}</span></div></div>`,
 		);
 	}
 

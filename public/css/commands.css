@@ -132,13 +132,6 @@
 	text-overflow: ellipsis;
 }
 
-.cmd-bot {
-	font-size: 0.8rem;
-	color: var(--text-muted);
-	white-space: nowrap;
-	flex-shrink: 0;
-}
-
 .cmd-empty {
 	text-align: center;
 	color: var(--text-muted);
