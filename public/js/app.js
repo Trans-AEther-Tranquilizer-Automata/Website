@@ -55,6 +55,17 @@
 		window.addEventListener("scroll", updateNav, { passive: true });
 	}
 
+	const mobileQuery = window.matchMedia("(max-width: 768px)");
+	mobileQuery.addEventListener("change", (e) => {
+		if (!e.matches && menuOpen && toggle && links) {
+			menuOpen = false;
+			toggle.classList.remove("active");
+			links.classList.remove("open");
+			document.body.style.overflow = "";
+			updateNav();
+		}
+	});
+
 	const cmdSearch = document.getElementById("cmd-search");
 	const cmdList = document.getElementById("cmd-list");
 	const cmdEmpty = document.getElementById("cmd-empty");
