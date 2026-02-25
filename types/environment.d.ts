@@ -5,4 +5,5 @@ type Environment = {
 	botInvite: string;
 	discordInvite: string;
 	sourceUrl: string;
+	commandsApiUrl: string;
 };

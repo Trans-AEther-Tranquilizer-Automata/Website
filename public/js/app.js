@@ -73,16 +73,22 @@
 	if (cmdSearch && cmdList && cmdEmpty) {
 		cmdSearch.addEventListener("input", () => {
 			const query = cmdSearch.value.toLowerCase().trim();
-			const items = cmdList.querySelectorAll(".cmd-item");
 			let visible = 0;
 
-			for (const item of items) {
-				const cmd = item.getAttribute("data-cmd") || "";
-				const desc =
-					item.querySelector(".cmd-desc")?.textContent?.toLowerCase() || "";
-				const match = cmd.includes(query) || desc.includes(query);
-				item.style.display = match ? "" : "none";
-				if (match) visible++;
+			for (const category of cmdList.querySelectorAll(".cmd-category")) {
+				let categoryVisible = 0;
+
+				for (const item of category.querySelectorAll(".cmd-item")) {
+					const cmd = item.getAttribute("data-cmd") || "";
+					const desc =
+						item.querySelector(".cmd-desc")?.textContent?.toLowerCase() || "";
+					const match = cmd.includes(query) || desc.includes(query);
+					item.style.display = match ? "" : "none";
+					if (match) categoryVisible++;
+				}
+
+				category.style.display = categoryVisible > 0 ? "" : "none";
+				visible += categoryVisible;
 			}
 
 			cmdEmpty.hidden = visible > 0;

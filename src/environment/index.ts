@@ -11,6 +11,8 @@ const environment: Environment = {
 	sourceUrl:
 		process.env.SOURCE_URL ||
 		"https://github.com/Trans-AEther-Tranquilizer-Automata/Website",
+	commandsApiUrl:
+		process.env.COMMANDS_API_URL || "https://api.prototype-tata.dev/commands",
 };
 
 function verifyRequiredVariables(): void {
