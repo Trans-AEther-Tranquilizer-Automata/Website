@@ -3,19 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Showcase — Tata Bot</title>
-		<meta name="description" content="Showcase of Tata Bot features for Arknights: Endfield on Discord." />
+		<title>{{LEGAL_TITLE}} — Tata Bot</title>
+		<meta
+			name="description"
+			content="{{LEGAL_TITLE}} for Tata Bot — a Discord bot for Arknights: Endfield."
+		/>
 		<meta name="theme-color" content="#d4a843" />
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Showcase — Tata Bot" />
-		<meta property="og:description" content="Showcase of Tata Bot features for Arknights: Endfield on Discord." />
+		<meta property="og:title" content="{{LEGAL_TITLE}} — Tata Bot" />
+		<meta
+			property="og:description"
+			content="{{LEGAL_TITLE}} for Tata Bot — a Discord bot for Arknights: Endfield."
+		/>
 		<meta property="og:image" content="/public/assets/bot/avatar.png" />
 
 		<link rel="icon" href="/public/assets/bot/avatar-circle.png" />
 		<link rel="stylesheet" href="/public/css/base.css" />
 		<link rel="stylesheet" href="/public/css/nav.css" />
-		<link rel="stylesheet" href="/public/css/showcase.css" />
+		<link rel="stylesheet" href="/public/css/legal.css" />
 		<link rel="stylesheet" href="/public/css/responsive.css" />
 		<script src="/public/js/app.js" defer></script>
 	</head>
@@ -23,10 +29,19 @@
 		<nav class="nav scrolled" id="nav">
 			<div class="nav-inner container">
 				<a href="/" class="nav-brand">
-					<img src="/public/assets/bot/avatar.png" alt="Tata" class="nav-avatar" />
+					<img
+						src="/public/assets/bot/avatar.png"
+						alt="Tata"
+						class="nav-avatar"
+					/>
 					<span class="nav-name">Tata</span>
 				</a>
-				<button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+				<button
+					type="button"
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="Toggle menu"
+				>
 					<span></span>
 					<span></span>
 					<span></span>
@@ -34,23 +49,22 @@
 				<div class="nav-links" id="nav-links">
 					<a href="/" class="nav-link">Home</a>
 					<a href="/commands" class="nav-link">Commands</a>
-					<a href="/showcase" class="nav-link nav-link-active">Showcase</a>
-					<a href="{{BOT_INVITE}}" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Invite Bot</a>
+					<a href="/showcase" class="nav-link">Showcase</a>
+					<a
+						href="{{BOT_INVITE}}"
+						target="_blank"
+						rel="noopener"
+						class="btn btn-sm btn-primary"
+						>Invite Bot</a
+					>
 				</div>
 			</div>
 		</nav>
 
-		<main class="showcase-page">
+		<main class="legal-page">
 			<div class="container">
-				<div class="showcase-header">
-					<span class="label">Preview</span>
-					<h1 class="showcase-title">Showcase</h1>
-					<p class="showcase-sub">{{SHOWCASE_COUNT}} previews of what Tata can do.</p>
-				</div>
-
-				{{SHOWCASE_CONTENT}}
+				<div class="legal-content">{{LEGAL_CONTENT}}</div>
 			</div>
 		</main>
-
 	</body>
 </html>

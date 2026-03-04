@@ -148,6 +148,12 @@ body {
 	opacity: 0.6;
 }
 
+.disclaimer-links {
+	display: flex;
+	gap: 16px;
+	flex-shrink: 0;
+}
+
 .disclaimer-link {
 	color: var(--accent-dim);
 	font-size: 0.75rem;
