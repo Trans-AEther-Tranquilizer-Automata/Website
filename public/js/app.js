@@ -94,4 +94,57 @@
 			cmdEmpty.hidden = visible > 0;
 		});
 	}
+
+	const lbTabs = document.getElementById("lb-tabs");
+	const lbBoards = document.getElementById("lb-boards");
+	const lbSearch = document.getElementById("lb-search");
+
+	if (lbTabs && lbBoards) {
+		const filterBoard = (board, query) => {
+			const empty = board.querySelector(".lb-empty");
+			let visible = 0;
+
+			for (const row of board.querySelectorAll(".lb-row:not(.lb-row-head)")) {
+				const user = row.getAttribute("data-user") || "";
+				const match = user.includes(query);
+				row.style.display = match ? "" : "none";
+				if (match) visible++;
+			}
+
+			if (empty) empty.hidden = visible > 0;
+		};
+
+		const activeBoard = () =>
+			lbBoards.querySelector(".lb-board:not([hidden])") ||
+			lbBoards.querySelector(".lb-board");
+
+		const lbTabNodes = lbTabs.querySelectorAll(".lb-tab");
+
+		for (const tab of lbTabNodes) {
+			tab.addEventListener("click", () => {
+				const name = tab.getAttribute("data-tab");
+
+				for (const t of lbTabNodes) {
+					t.classList.toggle("lb-tab-active", t === tab);
+				}
+
+				let current = null;
+				for (const board of lbBoards.querySelectorAll(".lb-board")) {
+					const isActive = board.getAttribute("data-board") === name;
+					board.hidden = !isActive;
+					if (isActive) current = board;
+				}
+
+				if (current)
+					filterBoard(current, lbSearch?.value.toLowerCase().trim() || "");
+			});
+		}
+
+		if (lbSearch) {
+			lbSearch.addEventListener("input", () => {
+				const board = activeBoard();
+				if (board) filterBoard(board, lbSearch.value.toLowerCase().trim());
+			});
+		}
+	}
 })();

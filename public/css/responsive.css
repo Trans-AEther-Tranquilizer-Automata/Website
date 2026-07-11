@@ -84,11 +84,13 @@
 
 	.cmd-page,
 	.showcase-page,
-	.legal-page {
+	.legal-page,
+	.lb-page {
 		padding: 88px 0 48px;
 	}
 
-	.cmd-search {
+	.cmd-search,
+	.lb-search {
 		font-size: 1rem;
 	}
 

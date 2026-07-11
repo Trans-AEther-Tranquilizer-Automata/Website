@@ -13,6 +13,9 @@ const environment: Environment = {
 		"https://github.com/Trans-AEther-Tranquilizer-Automata/Website",
 	commandsApiUrl:
 		process.env.COMMANDS_API_URL || "https://api.prototype-tata.dev/commands",
+	leaderboardApiUrl:
+		process.env.LEADERBOARD_API_URL ||
+		"https://api.prototype-tata.dev/leaderboard",
 };
 
 function verifyRequiredVariables(): void {

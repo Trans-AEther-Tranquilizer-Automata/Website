@@ -39,5 +39,5 @@ docker compose up -d
 
 Commands and showcase content are driven by text files in `data/`.
 
-- `data/commands.txt` — bot commands (`name | description | option | ?`)
-- `data/showcase/` — images with optional `.txt` descriptions
+- `data/commands.txt` - bot commands (`name | description | option | ?`)
+- `data/showcase/` - images with optional `.txt` descriptions

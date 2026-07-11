@@ -6,4 +6,5 @@ type Environment = {
 	discordInvite: string;
 	sourceUrl: string;
 	commandsApiUrl: string;
+	leaderboardApiUrl: string;
 };
