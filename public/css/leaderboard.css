@@ -98,6 +98,10 @@
 	flex-direction: column;
 }
 
+.lb-board[hidden] {
+	display: none;
+}
+
 .lb-row {
 	display: grid;
 	grid-template-columns: 48px 1fr auto;
