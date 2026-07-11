@@ -15,6 +15,6 @@
 	},
 	"dependencies": {
 		"@atums/echo": "latest",
-		"marked": "^17.0.3"
+		"marked": "^17.0.6"
 	}
 }

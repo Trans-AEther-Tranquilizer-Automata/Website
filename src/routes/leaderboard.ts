@@ -83,16 +83,17 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		});
 	}
 
-	const keys = Object.keys(data).filter(
-		(key) => /^[a-z0-9_-]+$/i.test(key) && Array.isArray(data[key]?.entries),
+	const boards = Object.entries(data).filter(
+		([key, board]) =>
+			/^[a-z0-9_-]+$/i.test(key) && Array.isArray(board?.entries),
 	);
 
-	const tabs = keys
-		.map((key, index) => buildTabHtml(key, data[key], index === 0))
+	const tabs = boards
+		.map(([key, board], index) => buildTabHtml(key, board, index === 0))
 		.join("\n\t\t\t\t\t");
 
-	const content = keys
-		.map((key, index) => buildBoardHtml(key, data[key], index === 0))
+	const content = boards
+		.map(([key, board], index) => buildBoardHtml(key, board, index === 0))
 		.join("\n\t\t\t\t\t");
 
 	return await serveView("leaderboard", {
