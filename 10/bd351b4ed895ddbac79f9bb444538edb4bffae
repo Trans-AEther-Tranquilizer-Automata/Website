@@ -1,0 +1,84 @@
+public/css/commands.css
+  s_7659038c839448::t_4c8df7d6f08bcd 7-12
+public/view/index.html
+  s_7659038c839448::t_355599a328ee76 25-42
+  s_7659038c839448::t_51684ca7953b78 78-81,84-87
+  s_7659038c839448::t_b1a5319f44d070 55-58
+  s_7659038c839448::t_09b657fadbc84f 13-16,18-23
+types/environment.d.ts
+  s_7659038c839448::t_84aec2e31f1a0f 10
+src/routes/sitemap.ts
+  s_7659038c839448::t_5e959fd413d33a 1-36
+public/view/404.html
+  s_7659038c839448::t_8e9431df7d1119 9
+  s_bca5b6a716d466::t_4d2ce0f3399c8b 52-55
+public/view/leaderboard.html
+  s_bca5b6a716d466::t_5cb000d45ede88 35-38
+  s_7659038c839448::t_cb8ba52616a149 13-16,18-23
+  s_7659038c839448::t_024eb04004915d 58
+src/environment/index.ts
+  s_7659038c839448::t_1f15284a46c34c 19
+src/routes/index.ts
+  s_7659038c839448::t_a48119ac8c89b3 11-12,17-19
+public/view/commands.html
+  s_7659038c839448::t_c20379f7cc185b 58
+  s_7659038c839448::t_b898959deed0b1 13-16,18-23
+  s_bca5b6a716d466::t_4a8dc23f356177 35-38
+src/routes/commands.ts
+  s_7659038c839448::t_e974a1bd3bb917 70-72
+  s_7659038c839448::t_b5d991255a2dc6 46,51-53
+public/view/showcase.html
+  s_7659038c839448::t_5c5a0345531fc2 13-16,18-23
+  s_bca5b6a716d466::t_7392708511bf0a 35-38
+src/server.ts
+  s_7659038c839448::t_b1679ddc958b43 274,276,278-283
+  s_7659038c839448::t_ed81328f92f14b 277
+  s_7659038c839448::t_acb850aefc3362 399,402-407
+  s_7659038c839448::t_6369e165100179 275
+src/routes/robots.ts
+  s_7659038c839448::t_dd4d1e22567827 1-28
+src/routes/leaderboard.ts
+  s_7659038c839448::t_0716eafb9208b5 79,84-86
+  s_7659038c839448::t_f123667b70296d 107-109
+src/routes/terms.ts
+  s_7659038c839448::t_5ca96ce9b84829 17,23-25
+src/routes/privacy.ts
+  s_7659038c839448::t_7a3d36370cee6e 17,23-25
+.env.example
+  s_7659038c839448::t_9c0fb7a6afd25d 8
+public/css/leaderboard.css
+  s_7659038c839448::t_9cc149ad6bbe69 7-12
+public/view/legal.html
+  s_7659038c839448::t_582e9115df9793 19-22,24-29
+  s_bca5b6a716d466::t_012982b55e6fb0 41-50
+src/routes/showcase/index.ts
+  s_7659038c839448::t_f323cc9609e6e1 47-49
+  s_7659038c839448::t_b7aedbe1e3499e 66-68
+  s_7659038c839448::t_19a2123e607fef 53
+  s_7659038c839448::t_fe026ec91160a5 24-27
+  s_7659038c839448::t_0b559ff81d06cd 50-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "10bd351b4ed895ddbac79f9bb444538edb4bffae",
+  "prompts": {},
+  "sessions": {
+    "s_7659038c839448": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06e44089bffe5dF5Bixt57CP37",
+        "model": "big-pickle"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    },
+    "s_bca5b6a716d466": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_06e39a59bffeTklb5Kcw62rvDD",
+        "model": "big-pickle"
+      },
+      "human_author": "Wolfkid200444 <32025746+Wolfkid200444@users.noreply.github.com>"
+    }
+  }
+}
