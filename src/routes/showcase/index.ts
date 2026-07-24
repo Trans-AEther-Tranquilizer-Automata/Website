@@ -21,9 +21,10 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		entries = [];
 	}
 
-	const images = entries.filter((f) =>
-		imageExtensions.has(parse(f).ext.toLowerCase()),
-	);
+	const images = entries.filter((f) => {
+		const ext = parse(f).ext.toLowerCase();
+		return imageExtensions.has(ext) && ext !== ".webp";
+	});
 	images.sort((a, b) => a.localeCompare(b));
 
 	const items: string[] = [];
@@ -43,8 +44,13 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 			? `<p class="showcase-desc">${desc.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>`
 			: "";
 
+		const webpExists = await Bun.file(
+			resolve(showcaseDir, `${name}.webp`),
+		).exists();
+		const imgSrc = webpExists ? `/showcase/${name}.webp` : src;
+
 		items.push(
-			`<div class="showcase-item"><img src="${src}" alt="${name}" class="showcase-img" loading="lazy" />${descHtml}</div>`,
+			`<div class="showcase-item"><picture>${webpExists ? `<source srcset="${src}" type="image/png" />` : ""}<img src="${imgSrc}" alt="${name}" class="showcase-img" loading="lazy" width="718" height="253" />${descHtml}</picture></div>`,
 		);
 	}
 
@@ -57,6 +63,9 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		BOT_INVITE: environment.botInvite,
 		SHOWCASE_CONTENT: content,
 		SHOWCASE_COUNT: images.length.toString(),
+		SITE_URL: environment.siteUrl.replace(/\/+$/, ""),
+		OG_IMAGE_URL: `${environment.siteUrl.replace(/\/+$/, "")}/public/assets/bot/avatar.png`,
+		CANONICAL_URL: `${environment.siteUrl.replace(/\/+$/, "")}/showcase`,
 	});
 }
 

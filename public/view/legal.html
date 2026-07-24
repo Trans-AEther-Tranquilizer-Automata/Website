@@ -16,8 +16,17 @@
 			property="og:description"
 			content="{{LEGAL_TITLE}} for Tata Bot - a Discord bot for Arknights: Endfield."
 		/>
-		<meta property="og:image" content="/public/assets/bot/avatar.png" />
+		<meta property="og:image" content="{{OG_IMAGE_URL}}" />
+		<meta property="og:url" content="{{CANONICAL_URL}}" />
+		<meta property="og:site_name" content="Tata Bot" />
+		<meta property="og:locale" content="en_US" />
 
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="{{LEGAL_TITLE}} - Tata Bot" />
+		<meta name="twitter:description" content="{{LEGAL_TITLE}} for Tata Bot - a Discord bot for Arknights: Endfield." />
+		<meta name="twitter:image" content="{{OG_IMAGE_URL}}" />
+
+		<link rel="canonical" href="{{CANONICAL_URL}}" />
 		<link rel="icon" href="/public/assets/bot/avatar-circle.png" />
 		<link rel="stylesheet" href="/public/css/base.css" />
 		<link rel="stylesheet" href="/public/css/nav.css" />
@@ -29,11 +38,16 @@
 		<nav class="nav scrolled" id="nav">
 			<div class="nav-inner container">
 				<a href="/" class="nav-brand">
-					<img
-						src="/public/assets/bot/avatar.png"
-						alt="Tata"
-						class="nav-avatar"
-					/>
+					<picture>
+						<source srcset="/public/assets/bot/avatar.webp" type="image/webp" />
+						<img
+							src="/public/assets/bot/avatar.png"
+							alt="Tata"
+							class="nav-avatar"
+							width="36"
+							height="36"
+						/>
+					</picture>
 					<span class="nav-name">Tata</span>
 				</a>
 				<button

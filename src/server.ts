@@ -271,6 +271,16 @@ class ServerHandler {
 			return response;
 		}
 
+		if (pathname === "/robots.txt" || pathname === "/sitemap.xml") {
+			const routeName = pathname.slice(1).split(".")[0];
+			const routeModule = await import(
+				resolve("src", "routes", `${routeName}.ts`)
+			);
+			response = await routeModule.handler(extendedRequest);
+			this.logRequest(extendedRequest, response, ip);
+			return response;
+		}
+
 		if (pathname.startsWith("/public")) {
 			return await this.serveStaticFile(extendedRequest, pathname, ip);
 		}
@@ -386,9 +396,15 @@ class ServerHandler {
 				);
 			}
 		} else {
+			const siteUrl = environment.siteUrl.replace(/\/+$/, "");
 			response = await serveView(
 				"404",
-				{ BOT_INVITE: environment.botInvite },
+				{
+					BOT_INVITE: environment.botInvite,
+					SITE_URL: siteUrl,
+					OG_IMAGE_URL: `${siteUrl}/public/assets/bot/avatar.png`,
+					CANONICAL_URL: `${siteUrl}${pathname}`,
+				},
 				404,
 			);
 		}

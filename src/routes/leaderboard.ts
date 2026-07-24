@@ -76,10 +76,14 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		const res = await fetch(environment.leaderboardApiUrl);
 		data = (await res.json()) as LeaderboardResponse;
 	} catch {
+		const siteUrl = environment.siteUrl.replace(/\/+$/, "");
 		return await serveView("leaderboard", {
 			BOT_INVITE: environment.botInvite,
 			LEADERBOARD_TABS: "",
 			LEADERBOARD_CONTENT: "",
+			SITE_URL: siteUrl,
+			OG_IMAGE_URL: `${siteUrl}/public/assets/bot/avatar.png`,
+			CANONICAL_URL: `${siteUrl}/leaderboard`,
 		});
 	}
 
@@ -100,6 +104,9 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		BOT_INVITE: environment.botInvite,
 		LEADERBOARD_TABS: tabs,
 		LEADERBOARD_CONTENT: content,
+		SITE_URL: environment.siteUrl.replace(/\/+$/, ""),
+		OG_IMAGE_URL: `${environment.siteUrl.replace(/\/+$/, "")}/public/assets/bot/avatar.png`,
+		CANONICAL_URL: `${environment.siteUrl.replace(/\/+$/, "")}/leaderboard`,
 	});
 }
 

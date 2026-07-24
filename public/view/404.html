@@ -6,6 +6,7 @@
 		<title>404 - Tata Bot</title>
 		<meta name="description" content="Page not found." />
 		<meta name="theme-color" content="#d4a843" />
+		<meta name="robots" content="noindex, nofollow" />
 
 		<link rel="icon" href="/public/assets/bot/avatar-circle.png" />
 		<link rel="stylesheet" href="/public/css/base.css" />
@@ -48,7 +49,10 @@
 		<nav class="nav scrolled" id="nav">
 			<div class="nav-inner container">
 				<a href="/" class="nav-brand">
-					<img src="/public/assets/bot/avatar.png" alt="Tata" class="nav-avatar" />
+					<picture>
+    <source srcset="/public/assets/bot/avatar.webp" type="image/webp" />
+    <img src="/public/assets/bot/avatar.png" alt="Tata" class="nav-avatar" width="36" height="36" />
+</picture>
 					<span class="nav-name">Tata</span>
 				</a>
 				<button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">

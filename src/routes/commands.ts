@@ -43,10 +43,14 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		const res = await fetch(environment.commandsApiUrl);
 		data = (await res.json()) as CommandsResponse;
 	} catch {
+		const siteUrl = environment.siteUrl.replace(/\/+$/, "");
 		return await serveView("commands", {
 			BOT_INVITE: environment.botInvite,
 			COMMANDS_CONTENT: "",
 			COMMANDS_COUNT: "0",
+			SITE_URL: siteUrl,
+			OG_IMAGE_URL: `${siteUrl}/public/assets/bot/avatar.png`,
+			CANONICAL_URL: `${siteUrl}/commands`,
 		});
 	}
 
@@ -63,6 +67,9 @@ async function handler(_request: ExtendedRequest): Promise<Response> {
 		BOT_INVITE: environment.botInvite,
 		COMMANDS_CONTENT: content,
 		COMMANDS_COUNT: totalCommands.toString(),
+		SITE_URL: environment.siteUrl.replace(/\/+$/, ""),
+		OG_IMAGE_URL: `${environment.siteUrl.replace(/\/+$/, "")}/public/assets/bot/avatar.png`,
+		CANONICAL_URL: `${environment.siteUrl.replace(/\/+$/, "")}/commands`,
 	});
 }
 

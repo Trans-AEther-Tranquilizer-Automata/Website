@@ -7,4 +7,5 @@ type Environment = {
 	sourceUrl: string;
 	commandsApiUrl: string;
 	leaderboardApiUrl: string;
+	siteUrl: string;
 };

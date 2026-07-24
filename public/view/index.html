@@ -10,9 +10,36 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Tata Bot - Arknights: Endfield Utility" />
 		<meta property="og:description" content="An all-in-one Arknights: Endfield utility bot for Discord. Track accounts, wishes, characters, events, and more." />
-		<meta property="og:image" content="/public/assets/bot/avatar.png" />
+		<meta property="og:image" content="{{OG_IMAGE_URL}}" />
+		<meta property="og:url" content="{{CANONICAL_URL}}" />
+		<meta property="og:site_name" content="Tata Bot" />
+		<meta property="og:locale" content="en_US" />
 
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Tata Bot - Arknights: Endfield Utility" />
+		<meta name="twitter:description" content="An all-in-one Arknights: Endfield utility bot for Discord. Track accounts, wishes, characters, events, and more." />
+		<meta name="twitter:image" content="{{OG_IMAGE_URL}}" />
+
+		<link rel="canonical" href="{{CANONICAL_URL}}" />
 		<link rel="icon" href="/public/assets/bot/avatar-circle.png" />
+
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "Tata Bot",
+			"applicationCategory": "GameApplication",
+			"operatingSystem": "Discord",
+			"description": "An all-in-one Arknights: Endfield utility bot for Discord. Track accounts, wishes, characters, events, and more.",
+			"url": "{{CANONICAL_URL}}",
+			"image": "{{OG_IMAGE_URL}}",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			}
+		}
+		</script>
 		<link rel="stylesheet" href="/public/css/base.css" />
 		<link rel="stylesheet" href="/public/css/nav.css" />
 		<link rel="stylesheet" href="/public/css/hero.css" />
@@ -25,7 +52,10 @@
 		<nav class="nav" id="nav">
 			<div class="nav-inner container">
 				<a href="/" class="nav-brand">
-					<img src="/public/assets/bot/avatar.png" alt="Tata" class="nav-avatar" />
+					<picture>
+						<source srcset="/public/assets/bot/avatar.webp" type="image/webp" />
+						<img src="/public/assets/bot/avatar.png" alt="Tata" class="nav-avatar" width="36" height="36" />
+					</picture>
 					<span class="nav-name">Tata</span>
 				</a>
 				<button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -45,10 +75,16 @@
 
 		<section class="hero" id="hero">
 			<div class="hero-bg">
-				<img src="/public/assets/bot/banner.png" alt="" class="hero-banner" />
+				<picture>
+					<source srcset="/public/assets/bot/banner.webp" type="image/webp" />
+					<img src="/public/assets/bot/banner.png" alt="" class="hero-banner" width="718" height="253" />
+				</picture>
 			</div>
 			<div class="hero-content fade-in">
-				<img src="/public/assets/bot/avatar.png" alt="Tata Bot" class="hero-avatar" />
+				<picture>
+					<source srcset="/public/assets/bot/avatar.webp" type="image/webp" />
+					<img src="/public/assets/bot/avatar.png" alt="Tata Bot" class="hero-avatar" width="120" height="120" />
+				</picture>
 				<h1 class="hero-title">Tata Bot</h1>
 				<p class="hero-tagline">Your all-in-one Arknights: Endfield companion on Discord.<br />Track accounts, wishes, characters, events, and more.</p>
 				<div class="hero-actions">

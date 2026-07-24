@@ -16,6 +16,7 @@ const environment: Environment = {
 	leaderboardApiUrl:
 		process.env.LEADERBOARD_API_URL ||
 		"https://api.prototype-tata.dev/leaderboard",
+	siteUrl: process.env.SITE_URL || "https://prototype-tata.dev",
 };
 
 function verifyRequiredVariables(): void {

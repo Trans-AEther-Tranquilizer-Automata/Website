@@ -14,11 +14,15 @@ const termsFile = resolve("data", "terms.md");
 async function handler(_request: ExtendedRequest): Promise<Response> {
 	const md = await Bun.file(termsFile).text();
 	const content = await marked.parse(md);
+	const siteUrl = environment.siteUrl.replace(/\/+$/, "");
 
 	return await serveView("legal", {
 		BOT_INVITE: environment.botInvite,
 		LEGAL_TITLE: "Terms of Service",
 		LEGAL_CONTENT: content,
+		SITE_URL: siteUrl,
+		OG_IMAGE_URL: `${siteUrl}/public/assets/bot/avatar.png`,
+		CANONICAL_URL: `${siteUrl}/terms`,
 	});
 }
 
